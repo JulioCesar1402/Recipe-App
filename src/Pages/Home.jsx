@@ -7,7 +7,7 @@ import Login from '../Components/Login';
 function Home() {
   return (
     <div className="meals">
-      <span className="logo">TRYBE</span>
+      <span className="logo">TrybeEats</span>
       <object
         className="rocksGlass"
         type="image/svg+xml"

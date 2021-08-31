@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import searchIcon from '../../images/searchIcon.svg';
-import profileIcon from '../../images/profileIcon.svg';
 import SearchBar from '../SearchBar';
 import '../../css/Headers.css';
 
@@ -14,28 +12,22 @@ function HeaderFoods() {
       <Link to="/perfil">
         <button
           type="button"
+          className="btn-remove-style"
         >
-          <img
-            data-testid="profile-top-btn"
-            src={ profileIcon }
-            alt="user profile"
-            width="30px"
-            height="30px"
-          />
+          <i className="bx bx-user bx-md header-icon" />
         </button>
       </Link>
       <h1 data-testid="page-title">Comidas</h1>
       <button
         type="button"
         onClick={ () => (searchBar ? getSearchBar(false) : getSearchBar(true)) }
+        className="btn-remove-style"
       >
-        <img
-          src={ searchIcon }
-          data-testid="search-top-btn"
-          alt="explore search"
-          width="30px"
-          height="30px"
-        />
+        {
+          !searchBar
+            ? <i className="bx bx-search bx-md header-icon" />
+            : <i className="bx bxs-search bx-md header-icon" />
+        }
       </button>
       {
         searchBar && <SearchBar />

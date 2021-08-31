@@ -31,9 +31,13 @@ const MainRouter = () => (
       path="/bebidas/:id"
       render={ (props) => <DetailsRecipesDrinks { ...props } /> }
     />
-    <Route exact path="/comidas" render={ () => <Foods /> } />
-    <Route exact path="/bebidas" render={ () => <Drinks /> } />
-    <Route exact path="/explorar" render={ (props) => <MainExplorer { ...props } /> } />
+    <Route exact path="/comidas" render={ (props) => <Foods { ...props } /> } />
+    <Route exact path="/bebidas" render={ (props) => <Drinks { ...props } /> } />
+    <Route
+      exact
+      path="/explorar"
+      render={ (props) => <MainExplorer { ...props } /> }
+    />
     <Route exact path="/explorar/comidas" render={ () => <ExplorerFoods /> } />
     <Route exact path="/explorar/bebidas" render={ () => <ExplorerDrinks /> } />
 

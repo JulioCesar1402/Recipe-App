@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Main.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -18,13 +19,14 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="login-body">
       <input
         type="email"
         data-testid="email-input"
         id="email-input"
         placeholder="Email"
         onChange={ ({ target }) => setEmail(target.value) }
+        className="login-email"
       />
 
       <input
@@ -32,16 +34,18 @@ export default function Login() {
         data-testid="password-input"
         placeholder="Senha"
         onChange={ ({ target }) => setPassword(target.value) }
+        className="login-password"
       />
 
-      <Link to="/comidas">
+      <Link to="/explorar">
         <button
           type="button"
           data-testid="login-submit-btn"
           disabled={ email && password ? !(checkEmailAndPass(email, password)) : true }
           onClick={ () => setLocalStorage(email) }
+          className="login-btn"
         >
-          Entrar
+          <b>Let&apos;s eat</b>
         </button>
       </Link>
     </div>

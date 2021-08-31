@@ -1,37 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import HeaderExplore from '../../Components/headers/HeaderExplore';
 import LowerMenu from '../../Components/footer/LowerMenu';
 
 export default function MainExplorer({ history }) {
-  const handleClick = ({ target }) => {
-    if (target.name === 'food') {
-      history.push('/explorar/comidas');
-    } else {
-      history.push('/explorar/bebidas');
-    }
-  };
-
   return (
     <div>
       <HeaderExplore history={ history } title="Explorar" />
-      <div>
-        <button
-          data-testid="explore-food"
-          name="food"
-          onClick={ handleClick }
-          type="button"
-        >
-          Explorar Comidas
-        </button>
-        <button
-          data-testid="explore-drinks"
-          name="drinks"
-          onClick={ handleClick }
-          type="button"
-        >
-          Explorar Bebidas
-        </button>
+      <div className="explore-body">
+        <Link to="/explorar/comidas">
+          <button
+            data-testid="explore-food"
+            name="food"
+            type="button"
+            className="btn-remove-style text btn-1"
+          >
+            <b>Explorar Comidas</b>
+          </button>
+        </Link>
+        <Link to="/explorar/bebidas">
+          <button
+            data-testid="explore-drinks"
+            name="drinks"
+            type="button"
+            className="btn-remove-style text"
+          >
+            <b>Explorar Bebidas</b>
+          </button>
+        </Link>
       </div>
       <footer>
         <LowerMenu />

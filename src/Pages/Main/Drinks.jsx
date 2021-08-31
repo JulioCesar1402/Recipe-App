@@ -31,9 +31,16 @@ function Drinks() {
 
   return (
     <div className="drink-page">
-      <HeaderDrinks />
-      <FilterButtonsDrink />
-      <DrinkCards />
+      <section>
+        <HeaderDrinks />
+        <FilterButtonsDrink />
+        <DrinkCards />
+      </section>
+      {
+        DrinkCards
+          ? <i className="bx bx-loader-alt bx-spin footer-icon-active bx-md" />
+          : null
+      }
       <LowerMenu />
     </div>
   );

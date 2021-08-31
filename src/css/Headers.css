@@ -1,14 +1,26 @@
-@media screen and ( max-width : 640px ) {
-
-  header {
-    align-items: stretch;
+  .header-drinks, .header-foods, .header-explore, .header-perfil {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-top: 1%;
+    justify-content: space-between;
+    margin-top: 4px;
+    position: fixed;
+    top: 0;
+    color: #FFD789;
+  }
+
+  .header-foods, .header-drinks {
+    margin-left: 1.2vw;
+    width: 95vw;
+  }
+
+  .header-perfil, .header-explore {
+    margin-left: -4.3vw;
+    width: 94vw;
   }
 
   h1 {
     font-size: 30px;
   }
-}
+
+  /* .page-title {
+
+  } */

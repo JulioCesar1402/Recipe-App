@@ -5,20 +5,26 @@ import LowerMenu from '../Components/footer/LowerMenu';
 
 const User = () => {
   if (localStorage.getItem('user')) {
-    const { email } = JSON.parse(localStorage.getItem('user'));
     return (
       <div>
         <HeaderPerfil />
-        <p data-testid="profile-email">{ email }</p>
-        <div>
+        <div className="user-body">
           <Link to="/receitas-feitas">
-            <button type="button" data-testid="profile-done-btn">
-              Receitas Feitas
+            <button
+              type="button"
+              data-testid="profile-done-btn"
+              className="btn-remove-style btn-1-user"
+            >
+              <b>Receitas Feitas</b>
             </button>
           </Link>
           <Link to="/receitas-favoritas">
-            <button type="button" data-testid="profile-favorite-btn">
-              Receitas Favoritas
+            <button
+              type="button"
+              data-testid="profile-favorite-btn"
+              className="btn-remove-style btn-2-user"
+            >
+              <b>Receitas Favoritas</b>
             </button>
           </Link>
           <Link to="/">
@@ -26,8 +32,9 @@ const User = () => {
               type="button"
               data-testid="profile-logout-btn"
               onClick={ () => localStorage.clear() }
+              className="btn-remove-style btn-3-user btn-2-user-font"
             >
-              Sair
+              <b>Sair</b>
             </button>
           </Link>
         </div>
