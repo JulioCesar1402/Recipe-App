@@ -5,16 +5,19 @@
     position: fixed;
     top: 0;
     color: #FFD789;
+    background-color: #242527;
   }
 
   .header-foods, .header-drinks {
-    margin-left: 1.2vw;
-    width: 95vw;
+    margin-left: -20px;
+    margin-top: 20px;
+    width: 400px;
   }
 
   .header-perfil, .header-explore {
-    margin-left: -4.3vw;
-    width: 94vw;
+    margin-left: -45px;
+    margin-top: 20px;
+    width: 400px;
   }
 
   h1 {

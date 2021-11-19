@@ -36,11 +36,6 @@ function Drinks() {
         <FilterButtonsDrink />
         <DrinkCards />
       </section>
-      {
-        DrinkCards
-          ? <i className="bx bx-loader-alt bx-spin footer-icon-active bx-md" />
-          : null
-      }
       <LowerMenu />
     </div>
   );

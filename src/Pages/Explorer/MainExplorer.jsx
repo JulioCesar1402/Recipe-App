@@ -7,7 +7,9 @@ import LowerMenu from '../../Components/footer/LowerMenu';
 export default function MainExplorer({ history }) {
   return (
     <div>
-      <HeaderExplore history={ history } title="Explorar" />
+      <div>
+        <HeaderExplore history={ history } title="Explorar" />
+      </div>
       <div className="explore-body">
         <Link to="/explorar/comidas">
           <button

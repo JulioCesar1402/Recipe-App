@@ -7,9 +7,9 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   const checkEmailAndPass = (e, p) => {
-    const validEmail = /^[a-z]+@[a-z]+\.[com]{3,}$/i;
+    const validEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
     const passLength = 6;
-    return validEmail.test(e) && p.length > passLength;
+    return validEmail.test(e) && p.length >= passLength;
   };
 
   const setLocalStorage = (emailUser) => {
@@ -32,7 +32,7 @@ export default function Login() {
       <input
         type="password"
         data-testid="password-input"
-        placeholder="Senha"
+        placeholder="Password (minimum 6 digits)"
         onChange={ ({ target }) => setPassword(target.value) }
         className="login-password"
       />

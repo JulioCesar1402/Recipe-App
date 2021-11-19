@@ -27,11 +27,6 @@ const LowerMenu = () => {
       setActiveCompass(false);
       setActiveDish(false);
       break;
-    // case '/perfil':
-    //   setActiveWine(false);
-    //   setActiveCompass(false);
-    //   setActiveDish(false);
-    //   break;
     default:
       setActiveWine(false);
       setActiveCompass(false);

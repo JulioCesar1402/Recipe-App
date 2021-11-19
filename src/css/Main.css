@@ -27,12 +27,12 @@
 }
 
 .footer-icon-active {
-  margin: 15px 8vw;
+  margin: 15px 70px;
   color: #FFD789;
 }
 
 .footer-icon {
-  margin: 15px 8vw;
+  margin: 15px 70px;
   color: #D9DBE9;
 }
 
@@ -85,6 +85,6 @@
   border: solid #D9DBE9;
   width: 320px;
   height: 100px;
-  font-size: 7vw;
+  font-size: 20px;
   border-radius: 8px;
 }
